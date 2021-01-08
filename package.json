@@ -1,0 +1,32 @@
+{
+  "name": "sunset-m4r-sh",
+  "description": "Source code for sunset.m4r.sh",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marshallcb/sunset-m4r-sh.git"
+  },
+  "scripts": {
+    "dev": "routo -c routo.config.js -w & augmit it public/it -w & serve public",
+    "build": "routo -c routo.config.js && augmit it public/it"
+  },
+  "dependencies": {
+    "augm-it": "^0.2.0",
+    "autoprefixer": "^10.1.0",
+    "csso": "^4.2.0",
+    "html-minifier-terser": "^5.1.1",
+    "hueman": "^2.1.1",
+    "postcss": "^8.2.1",
+    "routo": "^0.7.1",
+    "serve": "^11.3.2",
+    "stringified-handler": "^0.4.3",
+    "themepark": "^1.2.3",
+    "ucontent": "^2.0.0",
+    "uline": "0.0.2"
+  },
+  "author": {
+    "name": "Marshall Brandt",
+    "email": "hey@m4r.sh",
+    "url": "https://m4r.sh"
+  }
+}
