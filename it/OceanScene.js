@@ -58,6 +58,8 @@ let gradients = {
   }
 }
 
+let defaultTheme = 'bright'
+
  function generateGradient(gradient){
   let percent = x => Math.round((x/(gradient.length-1))*10000)/100 + '%'
   return gradient.map((args,i) => hueman(...args) +' '+ percent(i) ).join(',')
@@ -66,20 +68,19 @@ let gradients = {
 export default ()=>html`
   <div class=${OceanScene}>
     <div class=${OceanScene.sky}>
-      ${ Background(5,generateGradient(gradients.bright.sky), 'top', 1.5, true, "linear") }
+      ${ Background(5,generateGradient(gradients[defaultTheme].sky), 'top', 1.5, true, "linear") }
     </div>
     <div class=${OceanScene.sun} />
     <div class=${OceanScene.water}>
-    ${ Background(3,generateGradient(gradients.bright.water), 'bottom', 2, false, "cubic-bezier(0.435, 0.150, 0.465, 0.850)") }
+    ${ Background(3,generateGradient(gradients[defaultTheme].water), 'bottom', 2, false, "cubic-bezier(0.435, 0.150, 0.465, 0.850)") }
     </div>
   </div>
 `
 
 let shared = {
   init(){
-    this.theme = 'bright'
+    this.theme = defaultTheme
     this.index = Object.keys(gradients).indexOf(this.theme) || 0
-    this.render()
   },
   onClick(){
     let themes = Object.keys(gradients)

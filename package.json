@@ -11,7 +11,7 @@
     "build": "routo -c routo.config.js && augmit it public/it"
   },
   "dependencies": {
-    "augm-it": "^0.2.0",
+    "augm-it": "^0.2.1",
     "autoprefixer": "^10.1.0",
     "csso": "^4.2.0",
     "html-minifier-terser": "^5.1.1",
